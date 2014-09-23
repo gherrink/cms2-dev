@@ -11,7 +11,8 @@ body {
 }
 
 .wrap > .container {
-    padding: 70px 15px 20px;
+    padding: 0px 15px 20px;
+    background-color: transparent;
 }
 
 .footer {
@@ -88,4 +89,8 @@ a.desc:after {
     border-left: 3px solid #eed3d7;
     padding: 10px 20px;
     margin: 0 0 15px 0;
+}
+
+div.carousel {
+    height: 50%;
 }

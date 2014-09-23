@@ -1,7 +1,7 @@
 <?php
+
 /* @var $this yii\web\View */
-$this->title = 'My Yii Application';
+$this->title = 'Karate';
 ?>
-<div class="site-index">
-    hallo
-</div>
+
+<p>hallo</p>

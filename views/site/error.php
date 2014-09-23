@@ -9,8 +9,10 @@ use yii\helpers\Html;
 
 $this->title = $name;
 ?>
-<div class="site-error">
-
+<div class="site-error text-center">
+    
+    <i class="fa fa-exclamation-triangle fa-5x text-center"></i>
+    
     <h1><?= Html::encode($this->title) ?></h1>
 
     <div class="alert alert-danger">
