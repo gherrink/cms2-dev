@@ -18,7 +18,7 @@ return [
         ],
     ],
     ['label' => 'Training', 'url' => ['/site/page', 'view' => 'text']],
-    ['label' => 'Karate', 'url' => ['/site/page', 'view' => 'index']],
+    ['label' => 'Karate', 'url' => ['/site/page', 'view' => 'karate']],
     ['label' => 'Bilder', 'url' => ['/site/page', 'view' => 'tst']],
     ['label' => 'Aktuelles', 'url' => ['/site/page', 'view' => 'test']],
     ['label' => 'Termine', 'url' => ['/site/page', 'view' => 'test']],
