@@ -9,6 +9,11 @@ use app\assets\AppAsset;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+$genFooterNav = function ($item, $index) {
+  $content = Html::a($item['label'], $item['url']);
+  return Html::tag('li', $content);
+};
+
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -24,32 +29,32 @@ AppAsset::register($this);
 <body>
 
 <?php $this->beginBody() ?>
+    <header id="navbar-main">
+      <?php
+        NavBar::begin([
+            'brandLabel' => 'Karateverein <br> Samurai Maximiliansau',
+            'options' => [
+              'class' => 'navbar-default navbar-static-top header-top',
+              'tag' => 'div',
+            ],
+           'containerOptions' => [
+              'tag' => 'nav',
+            ],
+          ]);
+
+          echo Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-right'],
+            'items' => require(__DIR__ . '/menu.php'),
+          ]);
+        NavBar::end();
+      ?>
+      <?= Breadcrumbs::widget([
+        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        'options' => ['class' => 'container breadcrumb'],
+      ]) ?>
+    </header>
     <div class="wrap">
-        <header id="navbar-main">
-            <?php
-                NavBar::begin([
-                    'brandLabel' => 'Karateverein <br> Samurai Maximiliansau',
-                    'options' => [
-                        'class' => 'navbar-default navbar-static-top header-top',
-                        'tag' => 'div',
-                    ],
-                    'containerOptions' => [
-                        'tag' => 'nav',
-                    ],
-                ]);
-                echo Nav::widget([
-                    'options' => ['class' => 'navbar-nav navbar-right'],
-                    'items' => require(__DIR__ . '/menu.php'),
-                ]);
-                NavBar::end();
-            ?>
-              <?= Breadcrumbs::widget([
-                  'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                  'options' => ['class' => 'container breadcrumb'],
-              ]) ?>
-        </header> 
         <?php
-            
             $index = false;
             if(Yii::$app->controller->id === 'site' && (Yii::$app->controller->action->id === 'index' || (Yii::$app->controller->action->id === 'page' && (! array_key_exists(Yii::$app->controller->action->viewParam, $_GET) || $_GET[Yii::$app->controller->action->viewParam] === 'index'))))
             {
@@ -86,10 +91,38 @@ AppAsset::register($this);
     </div>
 
     <footer class="footer">
+      <div class="footer-top">
         <div class="container">
-            <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-            <p class="pull-right"><?= Yii::powered() ?></p>
+          <div class="row">
+            <div class="col-md-4">
+              <h3>Über uns</h3>
+              Hier steht dann n bissel bla über uns. Ich weiß noch net was aber irendwas
+              sollten wir hier hin schreiben. Damit jetzt mal n bissel Text da steht hab
+              ich einfach mal was hin geschrieben. Hoffe es is lang genug
+              <h3>Newsletter</h3>
+              Anmeldung zum Newsletter
+            </div>
+            <div class="col-md-4">
+              <h3>Neuigkeiten</h3>
+            </div>
+            <div class="col-md-4">
+              <h3>Neue Bilder</h3>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-nav">
+            <?= Html::ul(require(__DIR__ . '/footernav.php'), ['item'=>$genFooterNav]) ?>
+          </div>
+          <div class="clearfix"></div>
+          <div class="footer-text text-center">
+            Copyright &copy; Karate Samurai Maximiliansau <?= date('Y') ?>. All Rights Reserved. <br>
+            Created by Maurice Busch. <?= Yii::powered() ?>.
+          </div>
+        </div>
+      </div>
     </footer>
 
 <?php $this->endBody() ?>
