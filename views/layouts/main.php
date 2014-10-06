@@ -53,41 +53,41 @@ AppAsset::register($this);
         'options' => ['class' => 'container breadcrumb'],
       ]) ?>
     </header>
-    <div class="wrap">
-        <?php
-            $index = false;
-            if(Yii::$app->controller->id === 'site' && (Yii::$app->controller->action->id === 'index' || (Yii::$app->controller->action->id === 'page' && (! array_key_exists(Yii::$app->controller->action->viewParam, $_GET) || $_GET[Yii::$app->controller->action->viewParam] === 'index'))))
-            {
-                echo Carousel::widget([
-                    'items' => [
-                        // the item contains only the image
-                        [
-                            'content' => '<img src="http://localhost/cms2/web/img/1900x1080.gif"/>',
-                            'caption' => '<h2>Capiton 1</h2><p>This is the caption text</p>',
-                            'options' => ['style' => 'height: 300px;'],
-                        ],
-                        // equivalent to the above
-                        [
-                            'content' => '<img src="http://localhost/cms2/web/img/1900x1080.gif"/>',
-                            'caption' => '<h2>Capiton 2</h2><p>This is the caption text</p>',
-                            'options' => ['style' => 'height: 300px;'],
-                        ],
-                        // the item contains both the image and the caption
-                        [
-                            'content' => '<img src="http://localhost/cms2/web/img/1900x1080.gif"/>',
-                            'caption' => '<h2>Capiton 3</h2><p>This is the caption text</p>',
-                            'options' => ['style' => 'height: 300px;'],
-                        ],
-                    ],
-                    'options' => ['class' => 'slide']
-                ]);
-                $index = true;
-            }
-        ?>
+    <?php
+      $index = false;
+      if(Yii::$app->controller->id === 'site' && (Yii::$app->controller->action->id === 'index' || (Yii::$app->controller->action->id === 'page' && (! array_key_exists(Yii::$app->controller->action->viewParam, $_GET) || $_GET[Yii::$app->controller->action->viewParam] === 'index'))))
+      {
+        echo Carousel::widget([
+          'items' => [
+            // the item contains only the image
+            [
+              'content' => '<img src="http://localhost/cms2/web/img/1900x1080.gif"/>',
+              'caption' => '<h2>Capiton 1</h2><p>This is the caption text</p>',
+              'options' => ['style' => 'height: 300px;'],
+            ],
+            // equivalent to the above
+            [
+              'content' => '<img src="http://localhost/cms2/web/img/1900x1080.gif"/>',
+              'caption' => '<h2>Capiton 2</h2><p>This is the caption text</p>',
+              'options' => ['style' => 'height: 300px;'],
+            ],
+            // the item contains both the image and the caption
+            [
+              'content' => '<img src="http://localhost/cms2/web/img/1900x1080.gif"/>',
+              'caption' => '<h2>Capiton 3</h2><p>This is the caption text</p>',
+              'options' => ['style' => 'height: 300px;'],
+            ],
+          ],
+          'options' => ['class' => 'slide']
+        ]);
+        $index = true;
+      }
+    ?>
         
-        <div class="container">
-            <?= $content ?>
-        </div>
+    <div class="container">
+      <div class="main-content">
+        <?= $content ?>
+      </div>
     </div>
 
     <footer class="footer">

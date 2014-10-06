@@ -11,7 +11,7 @@ $this->title = $name;
 ?>
 <div class="site-error text-center">
     
-    <i class="fa fa-exclamation-triangle fa-5x text-center"></i>
+    <i class="fa fa-exclamation-triangle fa-5x text-center" style="margin-top: 15px"></i>
     
     <h1><?= Html::encode($this->title) ?></h1>
 

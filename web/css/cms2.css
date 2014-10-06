@@ -6,6 +6,8 @@ html {
 }
 body {
   margin: 0;
+  background-image: url("img/noisy-content.png");
+  background-color: #d9d9d9;
 }
 article,
 aside,
@@ -3092,19 +3094,13 @@ input[type="button"].btn-block {
     Created on : 02.10.2014, 11:09:37
     Author     : Maurice Busch <busch.maurice@gmx.net>
 */
-.wrap {
-  min-height: 100%;
-  height: auto;
-  margin: 0 auto -70px;
-  padding: 15px 0 88px;
-  background-image: url("img/noisy-content.png");
-  background-color: #d9d9d9;
-}
-.wrap > .container {
-  padding: 0px 15px 20px;
+.container .main-content {
+  margin: 15px auto;
+  padding: 5px 15px 5px 15px;
   background-color: #fff;
   border-radius: 10px;
   border: 2px #eee solid;
+  min-height: 50%;
 }
 .footer .footer-top {
   background-color: #222222;
@@ -3116,6 +3112,7 @@ input[type="button"].btn-block {
 .footer .footer-top h3 {
   color: #fff;
   font-size: 16px;
+  font-family: "Bitter", Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 .footer .footer-bottom {
@@ -6206,4 +6203,11 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+/* 
+    Created on : 06.10.2014, 14:18:31
+    Author     : Maurice Busch <busch.maurice@gmx.net>
+*/
+.main-content .fa {
+  color: #ff5d5d;
 }
