@@ -4608,8 +4608,6 @@ a.list-group-item.active > .badge,
   margin-bottom: 22px;
   line-height: 1.42857143;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -4618,6 +4616,7 @@ a.list-group-item.active > .badge,
 .thumbnail a > img {
   margin-left: auto;
   margin-right: auto;
+  border: #ff3636 solid 3px;
 }
 a.thumbnail:hover,
 a.thumbnail:focus,
@@ -4627,6 +4626,9 @@ a.thumbnail.active {
 .thumbnail .caption {
   padding: 9px;
   color: #333333;
+}
+.thumbnail h3 {
+  margin-top: 6px;
 }
 .alert {
   padding: 15px;

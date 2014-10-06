@@ -12,7 +12,7 @@ return [
     ['label' => 'Verein',
         'items' => [
             ['label' => 'Mitgliedschaft', 'url' => ['/site/page', 'view' => 'index']],
-            ['label' => 'Vorstand', 'url' => ['/site/page', 'view' => 'text']],
+            ['label' => 'Vorstand', 'url' => ['/site/page', 'view' => 'board']],
             ['label' => 'Über uns', 'url' => ['/site/page', 'view' => 'test']],
             ['label' => 'Geschichte', 'url' => ['/site/page', 'view' => 'test']],
         ],
