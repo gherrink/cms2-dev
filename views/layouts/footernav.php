@@ -9,7 +9,7 @@
  */
 
 return [
-    ['label' => 'Home', 'url' => ['/site/page', 'view' => 'test']],
-    ['label' => 'Impressum', 'url' => ['/site/page', 'view' => 'test']],
-    ['label' => 'Kontakt', 'url' => ['/site/page', 'view' => 'test']],
+    ['label' => 'Home', 'url' => ['/site/page', 'view' => 'index']],
+    ['label' => 'Impressum', 'url' => ['/site/page', 'view' => 'impressum']],
+    ['label' => 'Kontakt', 'url' => ['/site/page', 'view' => 'kontakt']],
 ];

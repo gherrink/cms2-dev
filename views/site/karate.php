@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * @link https://github.com/mrbirne/cms2
+ * @copyright Copyright (c) 2008 Yii Software LLC
+ * @license http://www.yiiframework.com/license/
+ * 
+ * @author Maurice Busch <busch.maurice@gmx.net>
+ */
+
 /* @var $this yii\web\View */
 $this->title = 'Karate';
 $this->params['breadcrumbs'][] = $this->title;
